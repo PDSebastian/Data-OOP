@@ -14,5 +14,6 @@ public:
 	virtual void pushBack(const T& val) = 0;
 	virtual int size() const = 0;
 	virtual ~ILista() = default;
+	
 };
 
