@@ -9,7 +9,7 @@ public:
 	Lista() {
 		this->head = NULL;
 	}
-	void addEnd(T valNode) override {
+	void addEnd(const T& valNode) override {
 		Node<T>* node = new Node<T>(valNode, nullptr);
 		node->setData(valNode);
 		if (!head) {
@@ -26,7 +26,7 @@ public:
 
 
 
-	}
+	}/*
 	void addStart(T val)override {
 		Node<T>* aux = new Node<T>(val, nullptr);
 		aux->setData(val);
@@ -67,7 +67,7 @@ public:
 
 		}
 	}
-	T front() override {
+	T front() override{
 		return head->getData();
 	
 	
@@ -80,5 +80,36 @@ public:
 		}
 		return aux->getData();
 	}
-
+	void pushFront(T val)override {
+		Node<T>* node = new Node<T>(val);
+		node->getNext() = head;
+		head = node;
+	
+	
+	
+	}
+	void pushBack(T val)override {
+		Node<T>* node = new Node<T>(val);
+		if (head == NULL) {
+			head = node;
+			return;
+		}
+		Node<T>* aux = head;
+		while (aux->getNext() != NULL) {
+			aux = aux->getNext();
+		
+		}
+		aux->getNext() = node;
+	
+	}
+	int size() override {
+		int ct = 0;
+		Node<T>* aux = head;
+		while (aux != NULL) {
+			ct++;
+			aux = aux->getNext();
+		
+		}
+		return ct;
+	}*/
 };

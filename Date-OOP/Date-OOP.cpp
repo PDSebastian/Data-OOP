@@ -7,9 +7,7 @@ int main()
 	lista->addEnd(10);
 	lista->addEnd(20);
 	lista->addEnd(30);
-	lista->afisare();
-	lista->front();
-	delete lista;
+
 
 
 
