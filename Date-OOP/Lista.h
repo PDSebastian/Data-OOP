@@ -26,15 +26,15 @@ public:
 
 
 
-	}/*
-	void addStart(T val)override {
+	}
+	void addStart(const T& val)override {
 		Node<T>* aux = new Node<T>(val, nullptr);
 		aux->setData(val);
 		aux->setNext(head);
 		head = aux;
 
 	}
-	void deleteNode(int poz)override {
+	void deleteNode(int poz) override {
 		if (!head) {
 			return;
 		}
@@ -59,7 +59,7 @@ public:
 
 
 	}
-	void afisare() override {
+	void afisare() const  override {
 		Node<T>* aux = head;
 		while (aux) {
 			cout<<aux->getData()<<" ";
@@ -67,12 +67,12 @@ public:
 
 		}
 	}
-	T front() override{
+	T front() const override{
 		return head->getData();
 	
 	
 	}
-	T back() override{
+	T back() const override {
 		Node<T>* aux = head;
 		while (aux->getNext() != NULL) {
 			aux = aux->getNext();
@@ -80,16 +80,14 @@ public:
 		}
 		return aux->getData();
 	}
-	void pushFront(T val)override {
-		Node<T>* node = new Node<T>(val);
-		node->getNext() = head;
+	void pushFront(const T& val) override {
+		Node<T>* node = new Node<T>(val,nullptr);
+		node->setNext(head);
 		head = node;
 	
-	
-	
 	}
-	void pushBack(T val)override {
-		Node<T>* node = new Node<T>(val);
+	void pushBack(const T& val)override {
+		Node<T>* node = new Node<T>(val,nullptr);
 		if (head == NULL) {
 			head = node;
 			return;
@@ -99,10 +97,10 @@ public:
 			aux = aux->getNext();
 		
 		}
-		aux->getNext() = node;
+		aux->setNext(node);
 	
 	}
-	int size() override {
+	int size() const override {
 		int ct = 0;
 		Node<T>* aux = head;
 		while (aux != NULL) {
@@ -111,5 +109,5 @@ public:
 		
 		}
 		return ct;
-	}*/
+	}
 };
