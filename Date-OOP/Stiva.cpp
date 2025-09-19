@@ -1,14 +1,12 @@
 #include "Stiva.h"
 template <typename T>
 void Stiva<T>::push(T elem){
-this->pushFront(elem);
+  this->pushFront(elem);
 
 }
 template <typename T>
  T Stiva<T>::top(){
-return this->front();
-
-
+  return this->front(); 
  }
  template <typename T>
  void Stiva<T>::pop(T elem){
@@ -16,7 +14,13 @@ return this->front();
  }
  template <typename T>
  void Stiva<T>::peek(){
-   this->front();
+   Node<T>*aux=this->head;
+   while(aux!=NULL){
+      cout<<aux->data<<" ";
+      aux=aux->getNext();
+   }
+   
  }
+
 
 
