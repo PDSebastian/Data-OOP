@@ -3,7 +3,7 @@
 template<typename T>
 class Lista  :public ILista<T>
 {
-private:
+protected:
 	Node<T>* head;
 public:
 	Lista() {

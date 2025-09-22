@@ -1,14 +1,15 @@
 #pragma once
 #include "Lista.h"
 template<typename T>
-class Stiva:public Lista<T> 
+class Stiva:private Lista<T> 
 {
 public :
-	void push(T elem);
-	T top();
-	void pop(T elem);
-	void peek();
-	
+	void push(const T& elem);
+	T top() const;
+	void pop();
+	int size() const;
+	bool isEmpty() const;
+	void afisareStiva() const;
 
 };
 
