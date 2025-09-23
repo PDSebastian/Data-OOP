@@ -15,10 +15,10 @@ public:
 		lista->addEnd(6);
 		lista->addEnd(7);
 		lista->addStart(10);
-		cout << lista->front()<<endl;
-		cout << lista->back()<<endl;
+		//cout << lista->front()<<endl;
+		//cout << lista->back()<<endl;
 		cout << lista->size() << endl;
-
+		lista->afisare();
 
 	}
 	void testareCoada() {
@@ -26,11 +26,11 @@ public:
 		coada->push(1);
 		coada->push(2);
 		coada->push(3);
-		coada->pop();
+		//coada->pop();
 		cout << coada->size() << endl;
-		cout << coada->front() << endl;
-		cout << coada->back() << endl;
-	
+		//cout << coada->front() << endl;
+		//cout << coada->back() << endl;
+		coada->afisareCoada();
 	
 	}
 	void testareDeque() {
@@ -66,7 +66,7 @@ public:
 		stiva->push(6);
 		stiva->pop();
 		cout << stiva->size() << endl;
-	
+		stiva->afisareStiva();
 	}
 	
 
